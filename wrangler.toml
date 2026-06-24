@@ -1,15 +1,5 @@
 name = "redirect-https"
 main = "worker.js"
-compatibility_date = "2024-01-01"
+compatibility_date = "2026-03-13"
 
-# 环境变量在 Cloudflare Dashboard 中设置
-[vars]
-MAIN_DOMAIN_A = "your-domain-a.com"
-MAIN_DOMAIN_B = "your-domain-b.com"
-DEFAULT_V6_PORT = "50443"
-AUTH_SECRET = "your-secret-here"
-
-# KV 命名空间绑定
-[[kv_namespaces]]
-binding = "STUN_HTTPS"
-id = "your-kv-namespace-id"
+# routes 和环境变量已在 Cloudflare Dashboard 中配置，不在 toml 中定义以免覆盖远程值
