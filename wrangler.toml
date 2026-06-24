@@ -1,0 +1,6 @@
+name = "redirect-https"
+main = "worker.js"
+compatibility_date = "2026-03-13"
+
+# vars、kv_namespaces、routes 等在 Cloudflare Dashboard 中配置
+# 此处不定义它们，wrangler deploy 就不会覆盖远程设置
