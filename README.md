@@ -72,12 +72,13 @@ Cloudflare DNS ──→ Worker (307 重定向)
 - 将本仓库 [`worker.js`](worker.js) 的代码全部复制粘贴到编辑器，保存并部署
 
 方式二：**连接 GitHub 自动同步（推荐）**
+- 先将本仓库 **Fork** 到你自己的 GitHub 账号
 - 进入 Cloudflare Dashboard → **Workers & Pages** → 创建 Worker → 选择 **Git 集成**
 - 授权 Cloudflare 访问你的 GitHub 账号
-- 选择本仓库 `narrator-z/redirect2stun`，分支 `main`
+- 选择你 fork 后的仓库，分支 `main`
 - Build command 留空，Deploy command 填 `npx wrangler deploy`
 
-> 💡 本项目 `wrangler.toml` 只包含 `name`、`main`、`compatibility_date` 三个字段，**不包含 vars、kv_namespaces、routes**，因此 `wrangler deploy` **不会覆盖**你在 Cloudflare Dashboard 中配置的环境变量、KV 绑定和域名路由。这些配置只需在 Dashboard 设置一次，以后只更新代码即可。
+> 💡 `wrangler.toml` 只包含 `name`、`main`、`compatibility_date` 三个字段，**不包含 vars、kv_namespaces、routes**，因此 `wrangler deploy` **不会覆盖**你在 Cloudflare Dashboard 中配置的环境变量、KV 绑定和域名路由。这些配置只需在 Dashboard 设置一次，以后只更新代码即可。
 
 #### 1.2 创建 KV 命名空间
 
