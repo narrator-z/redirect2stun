@@ -1,5 +1,0 @@
-name = "redirect-https"
-main = "worker.js"
-compatibility_date = "2026-03-13"
-
-# routes 和环境变量已在 Cloudflare Dashboard 中配置，不在 toml 中定义以免覆盖远程值
