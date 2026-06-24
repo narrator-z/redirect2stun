@@ -34,10 +34,7 @@ export default {
       targetHost = `${subdomain}.${MAIN_DOMAIN_B}`;
     }
     
-    // 使用 URL 对象构造确保格式 100% 正确
     const redirectUrl = new URL(`https://${targetHost}:${targetPort}${pathname}${search}`);
-    redirectUrl.searchParams.set("ts", Date.now().toString());
-
     // --- 4. 响应头 (强制不缓存) ---
     const commonHeaders = {
       "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
